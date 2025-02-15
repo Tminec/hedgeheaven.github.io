@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+    
+ display: flex;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+ padding: 10px;
+ font-family: "Poppins", sans-serif;
+ background: linear-gradient(120deg, #f54840 0%, #f11185 100%);
+}
+.tips {
+ color: #ccc;
+ font-style: italic;
+}
+.cointainer {
+ margin-top: 25;
+ max-width: 700px;
+ width: 100%;
+ padding: 30px 40px;
+ border-radius: 5px;
+ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+ background: #444;
+ color: #fff;
+}
+.cointainer .title {
+ font-size: 25px;
+ font-weight: 500;
+ position: relative;
+ cursor: pointer;
+}
+.cointainer .title::before {
+ content: "";
+ left: 0;
+ bottom: 0;
+ position: absolute;
+ border-radius: 5px;
+ height: 3px;
+ width: 30px;
+ transition: 0.5s;
+ background: linear-gradient(120deg, #f54840 0%, #f11185 100%);
+}
+.cointainer .title:hover::before {
+ content: "";
+ left: 0;
+ bottom: 0;
+ position: absolute;
+ border-radius: 5px;
+ height: 3px;
+ width: 30%;
+ background: linear-gradient(120deg, #f54840 0%, #f11185 100%);
+ transition: 0.5s;
+}
+.cointainer form .bot-details {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ margin: 20px 0 12px 0;
+}
+form .bot-details .info-input {
+ margin-bottom: 15px;
+ width: calc(100% / 2 - 20px);
+}
+.bot-details .info-input .detail {
+ display: block;
+ font-weight: 500;
+ margin-bottom: 5px;
+}
+.bot-details .info-input input {
+ height: 45px;
+ width: 100%;
+ outline: none;
+ font-size: 16px;
+ border-radius: 5px;
+ padding-left: 15px;
+ border: 1px solid #cacaca;
+ border-bottom-width: 2px;
+ transition: all 0.3s ease;
+}
+
+.bot-details .info-input input:focus,
+.bot-details .info-input input:valid {
+ border: 2px solid #f11185;
+ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+form .button {
+ height: 45px;
+ margin: 25px 0;
+}
+form .button button {
+ height: 100%;
+ width: 100%;
+ border-radius: 5px;
+ border: none;
+ color: #fff;
+ font-size: 18px;
+ font-weight: 500;
+ letter-spacing: 1px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ background: linear-gradient(120deg, #f54840 0%, #f11185 100%);
+}
+form .button button:hover {
+ transition: 0.5s;
+ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+ transform: translateY(-3px);
+ background: linear-gradient(-120deg, #f54840 0%, #f11185 100%);
+}
+.token {
+}
+
+@media (max-width: 584px) {
+ .cointainer {
+  max-width: 100%;
+ }
+ form .bot-details .info-input {
+  margin-bottom: 15px;
+  width: 100%;
+ }
+ .cointainer form .info-input {
+  max-height: 300px;
+  overflow-y: scroll;
+ }
+ .info-input::-webkit-scrollbar {
+  width: 10px;
+ }
+ .info-input::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #cacaca;
+ }
+}
